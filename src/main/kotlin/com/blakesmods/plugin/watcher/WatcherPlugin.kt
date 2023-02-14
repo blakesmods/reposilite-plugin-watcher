@@ -66,6 +66,10 @@ class WatcherPlugin : ReposilitePlugin() {
                 return@event
             }
 
+            if (!event.gav.endsWith(".jar")) {
+                return@event
+            }
+
             val info = createFileInfo(event.gav)
             val details = maven.findFile(
                 LookupRequest(
