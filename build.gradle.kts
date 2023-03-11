@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.blakesmods"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -16,7 +16,8 @@ repositories {
 }
 
 dependencies {
-    implementation("com.reposilite:reposilite:3.3.1")
+    compileOnly("com.reposilite:reposilite:3.3.1")
+
     implementation("org.litote.kmongo:kmongo:4.8.0")
 }
 
