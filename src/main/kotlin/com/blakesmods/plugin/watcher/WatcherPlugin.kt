@@ -16,6 +16,7 @@ import org.litote.kmongo.KMongo
 import org.litote.kmongo.getCollection
 import java.util.Date
 
+@Suppress("PropertyName")
 data class ModFile(
     val _id: ObjectId? = null,
     val file_name: String,
@@ -28,6 +29,7 @@ data class ModFile(
     val mc_version: String,
     val mc_version_group: String,
     val mc_version_parts: VersionParts,
+    val mc_versions: List<String>,
     val mod_version: String,
     val mod_version_parts: VersionParts,
     val curseforge_downloads: Number = 0,
@@ -89,6 +91,7 @@ class WatcherPlugin : ReposilitePlugin() {
                 mc_version = info.mcVersion,
                 mc_version_group = info.mcVersionGroup,
                 mc_version_parts = createVersionParts(info.mcVersion),
+                mc_versions = listOf(info.mcVersion),
                 mod_version = info.modVersion,
                 mod_version_parts = createVersionParts(info.modVersion)
             )
