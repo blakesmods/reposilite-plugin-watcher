@@ -83,11 +83,11 @@ class WatcherPlugin : ReposilitePlugin() {
 
             val file = ModFile(
                 file_name = info.fileName,
-                file_size = details.first.contentLength,
+                file_size = details.document.contentLength,
                 mod_id = info.modID,
                 upload_date = Date(),
                 maven_path = info.mavenPath,
-                md5_hash = DigestUtils.md5Hex(details.second),
+                md5_hash = DigestUtils.md5Hex(details.content),
                 mc_version = info.mcVersion,
                 mc_version_group = info.mcVersionGroup,
                 mc_version_parts = createVersionParts(info.mcVersion),

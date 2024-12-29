@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.reposilite:reposilite:3.3.1")
+    compileOnly("com.reposilite:reposilite:3.5.19")
 
     implementation("org.litote.kmongo:kmongo:4.8.0")
 }
