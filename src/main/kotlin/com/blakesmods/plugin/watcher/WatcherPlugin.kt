@@ -23,6 +23,7 @@ data class ModFile(
     val file_size: Number,
     val mod_id: String,
     val upload_date: Date,
+    val released: Boolean = false,
     val maven_path: String,
     val md5_hash: String,
     val site_downloads: Number = 0,
