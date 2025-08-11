@@ -16,9 +16,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.reposilite:reposilite:3.5.19")
+    compileOnly("com.reposilite:reposilite:3.5.25")
 
-    implementation("org.litote.kmongo:kmongo:4.8.0")
+    implementation("org.litote.kmongo:kmongo:4.11.0")
 }
 
 kotlin {
