@@ -65,7 +65,17 @@ class WatcherPlugin : ReposilitePlugin() {
 
         event { event: DeployEvent ->
             if (event.gav.endsWith("-api.jar")) {
-                logger.info("Skipping jar ${event.gav} as it's an API jar")
+                logger.info("Skipping API jar ${event.gav}")
+                return@event
+            }
+
+            if (event.gav.endsWith("-javadoc.jar")) {
+                logger.info("Skipping javadoc jar ${event.gav}")
+                return@event
+            }
+
+            if (event.gav.endsWith("-sources.jar")) {
+                logger.info("Skipping sources jar ${event.gav}")
                 return@event
             }
 
